@@ -39,10 +39,10 @@ export default function DentsPage() {
         <div className="bg-white text-neutral-700 rounded-xl shadow-md p-4 space-y-4 max-w-md my-4 mx-auto" data-aos="fade-up">
           <p className="mb-4">
             Chez Wafoulashes, notre service de blanchiment dentaire est conçu pour redonner éclat et blancheur à votre sourire en toute sécurité.
-            Grâce à des produits professionnels et des techniques douces, vous profitez d'un résultat visible dès la première séance.
+            Grâce à des produits professionnels et des techniques douces, vous profitez d&apos;un résultat visible dès la première séance.
           </p>
           <p>
-            Nous proposons également des retouches régulières pour maintenir l’éclat de vos dents ainsi que des strass dentaires pour une touche originale et glamour.
+            Nous proposons également des retouches régulières pour maintenir l&apos;éclat de vos dents ainsi que des strass dentaires pour une touche originale et glamour.
             Notre priorité : vous offrir un sourire lumineux et naturel, dans un cadre chaleureux et professionnel.
           </p>
         </div>

@@ -7,9 +7,8 @@ type CalendarSliderProps = {
   onSelectSlot: (slot: string) => void;
 };
 
-export default function CalendarSlider({ onSelectDate, onSelectSlot }: CalendarSliderProps) {
+export default function CalendarSlider({ onSelectDate }: CalendarSliderProps) {
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
-  const [selectedSlot, setSelectedSlot] = useState<string | null>(null);
   const [availableDays, setAvailableDays] = useState<Date[]>([]);
   const [currentMonthIndex, setCurrentMonthIndex] = useState(0);
 
@@ -35,13 +34,7 @@ export default function CalendarSlider({ onSelectDate, onSelectSlot }: CalendarS
 
   const handleDateSelect = (date: Date) => {
     setSelectedDate(date);
-    setSelectedSlot(null);
-    onSelectDate(date);
-  };
-
-  const handleSlotSelect = (slot: string) => {
-    setSelectedSlot(slot);
-    onSelectSlot(slot);
+        onSelectDate(date);
   };
 
   const nextMonth = () => {
@@ -55,8 +48,6 @@ export default function CalendarSlider({ onSelectDate, onSelectSlot }: CalendarS
       setCurrentMonthIndex(currentMonthIndex - 1);
     }
   };
-
-  const slots = ['10:00', '11:00', '14:00', '15:00', '16:00'];
 
   return (
     <div className="w-full max-w-md mx-auto">

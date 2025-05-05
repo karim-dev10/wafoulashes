@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaInstagram, FaSnapchatGhost, FaWhatsapp } from "react-icons/fa";
 
 function SocialBar() {

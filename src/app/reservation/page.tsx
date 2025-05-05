@@ -1,12 +1,10 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
 import Navbar from '../components/Navbar';
 import CalendarSlider from './Calendar';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import SocialBar from '../components/SocialBar';
 
 const fakeSlots = ['10:00', '11:00', '14:00', '15:00', '16:00'];
 
@@ -15,7 +13,6 @@ export default function ReservationPage() {
     AOS.init();
   }, []);
 
-  const router = useRouter();
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [selectedSlot, setSelectedSlot] = useState<string | null>(null);
   const [confirmed, setConfirmed] = useState(false);
