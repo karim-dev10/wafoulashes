@@ -3,6 +3,7 @@ import Navbar from "../../components/Navbar";
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Link from "next/link";
 
 export default function DentsPage() {
   useEffect(() => {
@@ -47,12 +48,12 @@ export default function DentsPage() {
         </div>
 
         <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-sm md:hidden">
-          <a
+          <Link
             href="./../reservation"
             className="block text-center bg-pink-600 text-white text-lg px-6 py-3 rounded-full shadow-md hover:bg-pink-700 transition"
           >
             Réserver maintenant
-          </a>
+          </Link>
         </div>
       </section>
     </>

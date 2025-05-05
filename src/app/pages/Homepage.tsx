@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+import Link from "next/link";
 
 function Homepage() {
     useEffect(() => {
@@ -39,38 +39,38 @@ function Homepage() {
             </p>
 
             <div className="flex gap-2" data-aos="fade-up">
-                <a
+                <Link
                     href="/reservation"
                     className="bg-pink-600 text-lg md:text-xl text-white py-1 px-2 md:py-2 md:px-4 rounded-full hover:bg-pink-700 transition"
                 >
                     Réserver un créneau
-                </a>
-                <a
+                </Link>
+                <Link
                     href="/prestations"
                     className="border border-pink-600 text-lg sm:text-xl py-1 px-2 md:py-2 md:px-4 text-pink-600 rounded-full hover:bg-pink-100 transition"
                 >
                     Voir les prestations
-                </a>
+                </Link>
             </div>
 
             <div className="hidden md:grid m-4 grid-cols-3 gap-5 relative" data-aos='zoom-in'>
                 <div className='text-pink-600 transform transition-all duration-500 hover:scale-105 hover:text-white'>
-                    <a href='/prestations/dentaire' className=' relative'>
+                    <Link href='/prestations/dentaire' className=' relative'>
                         <span className='absolute z-10 bottom-2 right-4 text-4xl font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.2)]'>Blanchiment</span>
                         <img src="/img/dent.jpg" className="w-90 h-80 object-cover rounded-xl brightness-50" />
-                    </a>
+                    </Link>
                 </div>
                 <div className='text-pink-600 transform transition-all duration-500 hover:scale-105 hover:text-white'>
-                    <a href='/prestations/cils' className='relative'>
+                    <Link href='/prestations/cils' className='relative'>
                         <span className='absolute z-10 bottom-2 right-4 text-4xl font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.2)]'>Cils</span>
                         <img src="/img/cils.jpg" className="w-90 h-80 object-cover rounded-xl brightness-50" />
-                    </a>
+                    </Link>
                 </div>
                 <div className='text-pink-600 transform transition-all duration-500 hover:scale-105 hover:text-white'>
-                    <a href='prestations/sourcils' className='relative'>
+                    <Link href='prestations/sourcils' className='relative'>
                         <span className='absolute z-10 bottom-2 right-4 text-4xl font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.2)]'>Sourcils</span>
                         <img src="/img/sourcils.jpg" className="w-90 h-80 object-cover rounded-xl brightness-50" />
-                    </a>
+                    </Link>
                     </div>
             </div>
 

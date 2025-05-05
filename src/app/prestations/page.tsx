@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import { Autoplay } from 'swiper/modules';
+import Link from "next/link";
 
 export default function PrestationsPage() {
 
@@ -26,26 +27,26 @@ export default function PrestationsPage() {
         <div className="flex-grow gap-5 grid grid-rows-3">
 
           {/* SOURCILS */}
-          <a href="/prestations/sourcils" className="relative border border-pink-600 bg-white rounded-xl shadow-md overflow-hidden">
+          <Link href="/prestations/sourcils" className="relative border border-pink-600 bg-white rounded-xl shadow-md overflow-hidden">
             <img src="/img/sourcils-3.png" className="w-full h-full brightness-30 object-cover rounded-xl" alt="Sourcils" />
             <span className="absolute font-great text-pink-600 bottom-2 left-3 text-2xl md:text-3xl">à partir de 20€</span>
             <span className="absolute font-great text-pink-600 bottom-2 right-3 text-4xl md:text-5xl">Sourcils</span>
-          </a>
+          </Link>
 
           {/* CILS */}
-          <a href="/prestations/cils" className="relative border border-pink-600 bg-white rounded-xl shadow-md overflow-hidden">
+          <Link href="/prestations/cils" className="relative border border-pink-600 bg-white rounded-xl shadow-md overflow-hidden">
             <img src="/img/cils-3.png" className="w-full h-full brightness-30 object-cover rounded-xl" alt="Cils" />
             <span className="absolute font-great text-pink-600 bottom-2 left-3 text-2xl md:text-3xl">à partir de 30€</span>
             <span className="absolute font-great text-pink-600 bottom-2 right-3 text-4xl md:text-5xl">Cils</span>
             
-          </a>
+          </Link>
 
           {/* DENTS */}
-          <a href="/prestations/dentaire" className="relative border border-pink-600 bg-white rounded-xl shadow-md overflow-hidden">
+          <Link href="/prestations/dentaire" className="relative border border-pink-600 bg-white rounded-xl shadow-md overflow-hidden">
             <img src="/img/dent-3.png" className="w-full h-full brightness-30 object-cover rounded-xl" alt="Dentaire" />
             <span className="absolute font-great text-pink-600 bottom-2 left-3 text-2xl md:text-3xl">à partir de 15€</span>
             <span className="absolute font-great text-pink-600 bottom-2 right-3 text-4xl md:text-5xl">Dentaire</span>
-          </a>
+          </Link>
         </div>
 
         {/* SECTION AVIS CLIENTS EN CAROUSEL */}

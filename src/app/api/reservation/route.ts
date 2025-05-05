@@ -48,7 +48,7 @@ export async function POST(req: NextRequest) {
         <p>Merci pour votre réservation chez <strong>Wafoulashes</strong>.</p>
         <p><strong>Date du rendez-vous :</strong> ${formattedDate} à ${formattedHour}</p>
         <p>Veuillez confirmer votre rendez-vous en cliquant sur le lien ci-dessous :</p>
-        <p><a href="https://wafoulashes.fr/api/confirm?token=${token}">Confirmer ma réservation</a></p>
+        <p><Link href="https://wafoulashes.fr/api/confirm?token=${token}">Confirmer ma réservation</Link></p>
         <p>À très bientôt !</p>
       `,
     });
