@@ -24,21 +24,30 @@ export default function ReservationPage() {
   const [prestation, setPrestation] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
+  const [loading, setLoading] = useState(false);
+
+
   const handleConfirm = async () => {
     setErrorMessage('');
-
+  
     if (!firstname || !lastname || !phone || !email) {
       setErrorMessage('Tous les champs sont obligatoires.');
       return;
     }
-
+  
     const phoneRegex = /^0[1-9]\d{8}$/;
     if (!phoneRegex.test(phone)) {
       setErrorMessage('Numéro de téléphone invalide.');
       return;
     }
-
+  
+    if (!prestation) {
+      setErrorMessage('Veuillez choisir une prestation.');
+      return;
+    }
+  
     if (selectedDate && selectedSlot) {
+      setLoading(true);
       try {
         const response = await fetch('/api/reservation', {
           method: 'POST',
@@ -53,21 +62,19 @@ export default function ReservationPage() {
             prestation,
           }),
         });
-
+  
         const result = await response.json();
         if (result.success) setConfirmed(true);
         else setErrorMessage(result.error || 'Erreur lors de la réservation.');
       } catch (err) {
         console.error(err);
         setErrorMessage('Une erreur est survenue. Veuillez réessayer plus tard.');
+      } finally {
+        setLoading(false);
       }
     }
-
-    if (!prestation) {
-      setErrorMessage('Veuillez choisir une prestation.');
-      return;
-    }
   };
+  
 
   return (
     <>
@@ -102,11 +109,10 @@ export default function ReservationPage() {
                         setSelectedSlot(slot);
                         setConfirmed(false);
                       }}
-                      className={`p-2 border rounded-lg transition ${
-                        selectedSlot === slot
-                          ? 'bg-neutral-100/90 text-white'
-                          : 'bg-pink-500 hover:bg-pink-600 text-white'
-                      }`}
+                      className={`p-2 border rounded-lg transition ${selectedSlot === slot
+                        ? 'bg-neutral-100/90 text-white'
+                        : 'bg-pink-500 hover:bg-pink-600 text-white'
+                        }`}
                     >
                       {slot}
                     </button>
@@ -180,9 +186,10 @@ export default function ReservationPage() {
 
                     <button
                       onClick={handleConfirm}
+                      disabled={loading}
                       className="w-full bg-pink-600 hover:bg-pink-700 text-white font-semibold p-3 rounded-xl transition text-sm"
                     >
-                      Confirmer la réservation
+                      {loading ? 'Envoi du mail de confirmation...' : 'Confirmer la réservation'}
                     </button>
                   </div>
                 </div>
@@ -196,7 +203,12 @@ export default function ReservationPage() {
             </div>
           )}
         </div>
-        {/* <SocialBar/> */}
+        {loading && (
+          <div className="fixed inset-0 bg-white/80 z-[999] flex items-center justify-center text-xl font-semibold text-pink-600">
+            Envoi du mail de confirmation...
+          </div>
+        )}
+
       </section>
     </>
   );
