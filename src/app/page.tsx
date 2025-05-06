@@ -1,15 +1,7 @@
-import Footer from './components/Footer';
-import Navbar from './components/Navbar'
-import SocialBar from './components/SocialBar';
-import Homepage from './components/Homepage';
- 
 export default function Home() {
   return (
-    <>
-    <Navbar/>
-    <Homepage/>
-    <SocialBar/>
-    <Footer/>
-    </>
+    <main className="text-center py-20">
+      <h1 className="text-4xl font-bold text-pink-600">Wafoulashes est en ligne 💅</h1>
+    </main>
   );
 }
