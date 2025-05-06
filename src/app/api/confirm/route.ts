@@ -36,9 +36,9 @@ export async function GET(req: NextRequest) {
 
     // Met à jour la réservation pour la confirmer
     await client.query(
-      'UPDATE reservations SET is_confirmed = true WHERE token = $1',
+      'UPDATE reservations SET confirmed = true WHERE token = $1',
       [token]
-    );
+    );    
 
     await client.end();
     

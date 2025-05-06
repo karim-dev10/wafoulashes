@@ -11,6 +11,7 @@ type Reservation = {
   date: string;
   hour: string;
   prestation: string;
+  confirmed: boolean;
 };
 
 const ADMIN_PASSWORD = 'wafou123';
@@ -139,6 +140,7 @@ export default function AdminPage() {
             <p>📞 {r.phone}</p>
             <p>✉️ {r.email}</p>
             <p>💅 {r.prestation}</p>
+            <p>✅ {r.confirmed ? 'Confirmé' : 'Non confirmé'}</p>
           </div>
           <button
             onClick={() => handleDelete(r.id)}

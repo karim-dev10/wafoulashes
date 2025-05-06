@@ -48,7 +48,7 @@ export async function POST(req: NextRequest) {
         <p>Merci pour votre réservation chez <strong>Wafoulashes</strong>.</p>
         <p><strong>Date du rendez-vous :</strong> ${formattedDate} à ${formattedHour}</p>
         <p>Veuillez confirmer votre rendez-vous en cliquant sur le lien ci-dessous :</p>
-        <p><Link href="https://wafoulashes.fr/api/confirm?token=${token}">Confirmer ma réservation</Link></p>
+        <p><a href="https://wafoulashes.fr/api/confirm?token=${token}">Confirmer ma réservation</a></p>
         <p>À très bientôt !</p>
       `,
     });
@@ -64,5 +64,32 @@ export async function POST(req: NextRequest) {
       { success: false, error: 'Erreur lors de l’enregistrement' },
       { status: 500 }
     );
+  }
+}
+
+export async function GET() {
+  const client = createClient();
+  try {
+    await client.connect();
+    const result = await client.query('SELECT * FROM reservations ORDER BY date DESC, hour DESC');
+    await client.end();
+    return NextResponse.json({ success: true, data: result.rows });
+  } catch (error) {
+    console.error('❌ Erreur GET réservation :', error);
+    return NextResponse.json({ success: false, error: 'Erreur lors de la récupération' }, { status: 500 });
+  }
+}
+
+export async function DELETE(req: NextRequest) {
+  const { id } = await req.json();
+  const client = createClient();
+  try {
+    await client.connect();
+    await client.query('DELETE FROM reservations WHERE id = $1', [id]);
+    await client.end();
+    return NextResponse.json({ success: true });
+  } catch (error) {
+    console.error('❌ Erreur DELETE réservation :', error);
+    return NextResponse.json({ success: false, error: 'Erreur lors de la suppression' }, { status: 500 });
   }
 }
