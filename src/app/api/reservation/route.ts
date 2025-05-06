@@ -11,6 +11,9 @@ const createClient = () =>
     user: process.env.PGUSER,
     password: process.env.PGPASSWORD,
     database: process.env.PGDATABASE,
+    ssl: {
+      rejectUnauthorized: false, // autorise SSL même sans certificat
+    },
   });
 
   console.log('🔍 ENV:', {
