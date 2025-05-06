@@ -71,6 +71,7 @@ export default function ReservationPage() {
         setErrorMessage('Une erreur est survenue. Veuillez réessayer plus tard.');
       } finally {
         setLoading(false);
+        setSelectedSlot(null)
       }
     }
   };
@@ -198,9 +199,9 @@ export default function ReservationPage() {
           )}
 
           {confirmed && (
-            <div className="mt-6 text-center text-green-600 font-medium">
-              ✅ {firstname} {lastname}, votre rendez-vous est confirmé pour le {selectedDate?.toLocaleDateString('fr-FR')} à {selectedSlot}.
-            </div>
+             <div className="mt-6 text-center text-pink-700 font-medium">
+             ✅ Merci {firstname}, veuillez confirmer votre réservation via le lien reçu par e-mail.
+           </div>
           )}
         </div>
         {loading && (
