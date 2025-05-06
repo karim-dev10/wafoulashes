@@ -13,6 +13,11 @@ const createClient = () =>
     database: process.env.PGDATABASE,
   });
 
+  console.log('🔍 ENV:', {
+    host: process.env.PGHOST,
+    user: process.env.PGUSER,
+  });
+
 export async function POST(req: NextRequest) {
   const { firstname, lastname, phone, email, date, hour, prestation } = await req.json();
   const client = createClient();
