@@ -1,7 +1,15 @@
+import Footer from './components/Footer';
+import Navbar from './components/Navbar'
+import SocialBar from './components/SocialBar';
+import Homepage from './components/Homepage';
+ 
 export default function Home() {
   return (
-    <main style={{ textAlign: "center", padding: "100px" }}>
-      <h1>✅ Page d’accueil OK</h1>
-    </main>
+    <>
+    <Navbar/>
+    <Homepage/>
+    <SocialBar/>
+    <Footer/>
+    </>
   );
 }
