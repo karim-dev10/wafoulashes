@@ -9,14 +9,15 @@ export default function BurgerMenu() {
   const [openSubmenu, setOpenSubmenu] = useState(false)
 
   return (
-    <div className="md:hidden relative">
+    <div className="md:hidden">
+      <div className="">
       <Sheet>
         <SheetTrigger asChild>
           <button className="flex items-center justify-center w-10 h-10 rounded-full bg-pink-50 text-pink-600 hover:bg-pink-100 transition-colors">
             <Menu size={20} />
           </button>
         </SheetTrigger>
-        <SheetContent side="left" className="border-r border-pink-100 bg-gradient-to-b from-white to-pink-50 p-0">
+        <SheetContent side="left" className="border-r border-pink-100 bg-white from-white to-pink-50 p-0">
           <SheetHeader className="p-4 border-b border-pink-100">
             <SheetTitle className="flex items-center justify-between">
               <div className="flex items-center">
@@ -102,6 +103,7 @@ export default function BurgerMenu() {
           </nav>
         </SheetContent>
       </Sheet>
+        </div>
         </div>
   )
 }
