@@ -3,6 +3,9 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Wafoulashes",
+  icons: {
+    icon: "/favicon.ico",
+  },
   description: "Réservez vos prestations beauté en ligne : extensions de cils, soins sourcils, blanchiment dentaire avec Wafoulashes en Île-de-France.",
   keywords: "wafoulashes, cils, sourcils, blanchiment dentaire, beauté, réservation, esthétique, browlift, airbrush, paris, ile-de-france, idf, rehaussement, retouche, strass",
   authors: [{ name: "Wafoulashes", url: "https://wafoulashes.fr" }],

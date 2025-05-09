@@ -6,7 +6,7 @@ import { Sheet, SheetTrigger, SheetContent, SheetHeader, SheetTitle, SheetClose 
 import Link from "next/link"
 
 export default function BurgerMenu() {
-  const [openSubmenu, setOpenSubmenu] = useState(false)
+  const [openSubmenu, setOpenSubmenu] = useState(true)
 
   return (
     <div className="md:hidden">
