@@ -3,12 +3,15 @@ import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Navbar from "../components/Navbar";
+import { useRouter } from "next/navigation"
 import SocialBar from '../components/SocialBar';
 
 export default function ContactPage() {
     useEffect(() => {
             AOS.init();
         }, []);
+
+        const router = useRouter()
   return (
     <>
     <Navbar/>
@@ -18,32 +21,62 @@ export default function ContactPage() {
         Une question, une demande ? Remplis le formulaire ci-dessous ou écris-nous sur Instagram : Wafoulashes
       </p>
 
-      <form className="w-full max-w-md space-y-4 text-neutral-950">
-        <input
-          type="text"
-          placeholder="Nom"
-          className="w-full p-3 border border-neutral-300 rounded-md"
-          required
-        />
-        <input
-          type="email"
-          placeholder="Email"
-          className="w-full p-3 border border-neutral-300 rounded-md"
-          required
-        />
-        <textarea
-          placeholder="Message"
-          rows={5}
-          className="w-full p-3 border border-neutral-300 rounded-md"
-          required
-        ></textarea>
-        <button
-          type="submit"
-          className="w-full bg-pink-600 text-white font-semibold py-3 rounded-md hover:bg-pink-700 transition cursor-pointer"
-        >
-          Envoyer
-        </button>
-      </form>
+      <form
+  onSubmit={async (e) => {
+    e.preventDefault()
+    const form = e.currentTarget
+    const formData = new FormData(form)
+
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+    }
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+
+    if (res.ok) {
+      router.push('/contact/success')
+      form.reset()
+    } else {
+      alert("Erreur lors de l'envoi ❌")
+    }
+  }}
+  className="w-full max-w-md space-y-4 text-neutral-950"
+>
+  <input
+    type="text"
+    name="name"
+    placeholder="Nom"
+    className="w-full p-3 border border-neutral-300 rounded-md"
+    required
+  />
+  <input
+    type="email"
+    name="email"
+    placeholder="Email"
+    className="w-full p-3 border border-neutral-300 rounded-md"
+    required
+  />
+  <textarea
+    name="message"
+    placeholder="Message"
+    rows={5}
+    className="w-full p-3 border border-neutral-300 rounded-md"
+    required
+  ></textarea>
+  <button
+    type="submit"
+    className="w-full bg-pink-600 text-white font-semibold py-3 rounded-md hover:bg-pink-700 transition cursor-pointer"
+  >
+    Envoyer
+  </button>
+</form>
+
       <SocialBar/>
     </section>
     </>
