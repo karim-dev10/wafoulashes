@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { ChevronDown, ChevronRight, Menu, X } from "lucide-react"
 import { Sheet, SheetTrigger, SheetContent, SheetHeader, SheetTitle, SheetClose } from "./sheet"
+import Link from "next/link"
 
 export default function BurgerMenu() {
   const [openSubmenu, setOpenSubmenu] = useState(false)
@@ -33,7 +34,7 @@ export default function BurgerMenu() {
 
           <nav className="py-6 px-4">
             <div className="space-y-5">
-              <a
+              <Link
                 href="/reservation"
                 className="flex items-center py-2 px-3 rounded-lg bg-pink-100 text-pink-800 font-medium shadow-sm"
               >
@@ -41,7 +42,7 @@ export default function BurgerMenu() {
                   R
                 </span>
                 Réserver
-              </a>
+              </Link>
 
               <div className="space-y-2">
                 <button
@@ -63,32 +64,32 @@ export default function BurgerMenu() {
 
                 {openSubmenu && (
                   <div className="ml-8 pl-2 border-l-2 border-pink-200 space-y-3 py-2">
-                    <a
+                    <Link
                       href="/prestations/sourcils"
                       className="flex items-center py-1.5 px-3 rounded-md hover:bg-pink-50 text-gray-700"
                     >
                       <div className="w-1.5 h-1.5 rounded-full bg-pink-400 mr-2"></div>
                       Sourcils
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       href="/prestations/cils"
                       className="flex items-center py-1.5 px-3 rounded-md hover:bg-pink-50 text-gray-700"
                     >
                       <div className="w-1.5 h-1.5 rounded-full bg-pink-400 mr-2"></div>
                       Cils
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       href="/prestations/dentaire"
                       className="flex items-center py-1.5 px-3 rounded-md hover:bg-pink-50 text-gray-700 font-medium"
                     >
                       <div className="w-1.5 h-1.5 rounded-full bg-pink-400 mr-2"></div>
                       Dentaire
-                    </a>
+                    </Link>
                   </div>
                 )}
               </div>
 
-              <a
+              <Link
                 href="/contact"
                 className="flex items-center py-2 px-3 rounded-lg hover:bg-pink-50 text-gray-800 font-medium transition-colors"
               >
@@ -96,7 +97,7 @@ export default function BurgerMenu() {
                   C
                 </span>
                 Contact
-              </a>
+              </Link>
             </div>
           </nav>
         </SheetContent>

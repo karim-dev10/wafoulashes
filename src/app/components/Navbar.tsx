@@ -4,7 +4,6 @@ import Link from "next/link";
 import BurgerMenu from "./ui/BurgerMenu";
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
