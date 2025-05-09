@@ -1,14 +1,19 @@
-'use client';
-import Link from "next/link";
-import BurgerMenu from "./ui/BurgerMenu";
+'use client'
+
+import Link from "next/link"
+import BurgerMenu from "./ui/BurgerMenu"
+import { usePathname } from "next/navigation"
 
 function Navbar() {
+  const pathname = usePathname()
+  const isReservationPage = pathname === "/reservation"
 
   return (
-    <>
-    <header className="bg-pink-200/80 shadow-md sticky top-0 w-full z-50">
+    <header className={`${isReservationPage ? "sticky" : "fixed"} top-0 w-full z-50 bg-pink-200/80 shadow-md`}>
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3 font-inter">
-        <h1 className="text-neutral-700 text-2xl font-bold font-great"><Link href="/">Wafoulashes</Link></h1>
+        <h1 className="text-neutral-700 text-2xl font-bold font-great">
+          <Link href="/">Wafoulashes</Link>
+        </h1>
         <nav className="hidden md:flex gap-6 text-xl font-medium text-neutral-700">
           <Link href="/prestations" className="hover:text-pink-600 transition">Prestations</Link>
           <Link href="/reservation" className="hover:text-pink-600 transition">Réserver</Link>
@@ -17,8 +22,7 @@ function Navbar() {
         <BurgerMenu />
       </div>
     </header>
-    </>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar
