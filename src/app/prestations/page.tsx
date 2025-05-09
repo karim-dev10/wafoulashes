@@ -19,7 +19,7 @@ export default function PrestationsPage() {
   return (
     <>
       <Navbar />
-      <section data-aos="zoom-in" className="min-h-screen bg-pink-50 px-4 py-16 font-ubuntu flex flex-col justify-center items-center">
+      <section data-aos="zoom-in" className="min-h-screen bg-pink-50 px-4 py-16 font-inter flex flex-col justify-center items-center">
         <h1 className="mt-3 text-2xl md:text-3xl font-bold text-center mb-5 text-neutral-800">
           Découvrez nos prestations
         </h1>

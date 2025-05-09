@@ -10,7 +10,7 @@ function Homepage() {
     }, []);
 
     return (
-        <section className="section-hp relative z-0 min-h-screen bg-pink-50 flex flex-col justify-center items-center text-center font-ubuntu overflow-hidden">
+        <section className="section-hp relative z-0 min-h-screen bg-pink-50 flex flex-col justify-center items-center text-center font-inter overflow-hidden">
             {/* Images de fond animées */}
             <div className="flex md:hidden absolute top-0 left-0 w-full h-full justify-center items-center z-[-1] overflow-hidden slider ">
                 <div className="animate-slide-vertical flex flex-col items-center gap-6 opacity-30 slider-track animate-[scroll_60s_linear_infinite]">
@@ -34,7 +34,7 @@ function Homepage() {
             <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-900 font-great" data-aos="fade-up">
                 Wafoulashes
             </h1>
-            <p className="font-ubuntu tracking-wide text-lg space- md:text-xl max-w-3xl mb-6 text-black font-semibold" data-aos="fade-up">
+            <p className="font-inter tracking-wide text-lg space- md:text-xl max-w-3xl mb-6 text-black font-semibold" data-aos="fade-up">
                 Sublime ton regard et ton sourire avec nos prestations beauté à petit prix.
             </p>
 

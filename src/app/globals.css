@@ -39,8 +39,8 @@ body {
   font-family: 'Great Vibes', cursive;
 }
 
-.font-ubuntu {
-  font-family: 'Ubuntu', 'sans-serif';
+.font-inter {
+  font-family: "Inter", sans-serif;
 }
 
 [data-nextjs-toast] {

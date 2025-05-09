@@ -82,7 +82,7 @@ export default function ReservationPage() {
       <Navbar />
       <section className="px-4 py-25" data-aos="zoom-in">
         <div className="p-4 max-w-xl mx-auto text-neutral-800">
-          <h1 className=" text-2xl md:text-3xl font-bold mb-6 text-center font-ubuntu tracking-wide">Réserver une prestation</h1>
+          <h1 className=" text-2xl md:text-3xl font-bold mb-6 text-center font-inter tracking-wide">Réserver une prestation</h1>
 
           <CalendarSlider
             onSelectDate={(date) => {
@@ -123,7 +123,7 @@ export default function ReservationPage() {
 
               {selectedSlot && (
                 <div data-aos="zoom-in" className="fixed inset-0 z-50 flex items-center justify-center p-4 ">
-                  <div className="font-ubuntu w-full max-w-md bg-white p-7 rounded-3xl shadow-xl border border-pink-400 space-y-3">
+                  <div className="font-inter w-full max-w-md bg-white p-7 rounded-3xl shadow-xl border border-pink-400 space-y-3">
                     <div className="flex justify-between items-center">
                       <h2 className="text-xl font-bold text-pink-700">Confirmation</h2>
                       <button onClick={() => setSelectedSlot(null)} className="text-xl">❌</button>

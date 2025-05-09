@@ -1,7 +1,19 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+   async headers() {
+    return [
+      {
+        source: '/(sitemap.*|robots.txt)', // toutes les URLs de sitemap
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'application/xml',
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;

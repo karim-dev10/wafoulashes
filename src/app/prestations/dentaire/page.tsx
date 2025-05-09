@@ -14,7 +14,7 @@ export default function DentsPage() {
     <>
       <Navbar />
 
-      <section className="min-h-screen bg-pink-50 px-4 py-25 font-ubuntu">
+      <section className="min-h-screen bg-pink-50 px-4 py-25 font-inter">
         <div className="mb-6 rounded-xl overflow-hidden shadow-md" data-aos="fade-down">
           <img src="/img/dent-2.jpg" alt="Blanchiment dentaire" className="w-full h-64 object-cover brightness-90" />
         </div>
