@@ -32,7 +32,7 @@ function Homepage() {
 
             {/* Texte */}
             <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-900 font-great" data-aos="fade-up">
-            Wafoulashes
+                Wafoulashes
             </h1>
             <p className="font-ubuntu tracking-wide text-lg space- md:text-xl max-w-3xl mb-6 text-black font-semibold" data-aos="fade-up">
                 Sublime ton regard et ton sourire avec nos prestations beauté à petit prix.
@@ -40,16 +40,16 @@ function Homepage() {
 
             <div className="flex gap-2" data-aos="fade-up">
                 <Link
-                    href="/reservation"
-                    className="bg-pink-600 text-lg md:text-xl text-white py-1 px-2 md:py-2 md:px-4 rounded-full hover:bg-pink-700 transition"
-                >
-                    Réserver un créneau
-                </Link>
-                <Link
                     href="/prestations"
                     className="border border-pink-600 text-lg sm:text-xl py-1 px-2 md:py-2 md:px-4 text-pink-600 rounded-full hover:bg-pink-100 transition"
                 >
                     Voir les prestations
+                </Link>
+                <Link
+                    href="/reservation"
+                    className="bg-pink-600 text-lg md:text-xl text-white py-1 px-2 md:py-2 md:px-4 rounded-full hover:bg-pink-700 transition"
+                >
+                    Réserver un créneau
                 </Link>
             </div>
 
@@ -71,7 +71,7 @@ function Homepage() {
                         <span className='absolute z-10 bottom-2 right-4 text-4xl font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.2)]'>Sourcils</span>
                         <img src="/img/sourcils.jpg" className="w-90 h-80 object-cover rounded-xl brightness-50" />
                     </Link>
-                    </div>
+                </div>
             </div>
 
 
