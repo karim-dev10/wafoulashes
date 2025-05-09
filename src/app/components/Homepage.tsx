@@ -28,16 +28,14 @@ function Homepage() {
                 </div>
             </div>
 
-
-
-            {/* Texte */}
-            <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-900 font-great" data-aos="fade-up">
-                Wafoulashes
-            </h1>
-            <p className="font-inter tracking-wide text-lg space- md:text-xl max-w-3xl mb-6 text-black font-semibold" data-aos="fade-up">
-                Sublime ton regard et ton sourire avec nos prestations beauté à petit prix.
-            </p>
-
+            <div className='px-5'>
+                <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-900 font-great" data-aos="fade-up">
+                    Wafoulashes
+                </h1>
+                <p className="font-inter tracking-wide text-lg space- md:text-xl max-w-3xl mb-6 text-black font-semibold" data-aos="fade-up">
+                    Sublime ton regard et ton sourire avec nos prestations beauté à petit prix.
+                </p>
+            </div>
             <div className="flex gap-2" data-aos="fade-up">
                 <Link
                     href="/prestations"
