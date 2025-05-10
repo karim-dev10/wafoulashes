@@ -19,38 +19,38 @@ export default function PrestationsPage() {
   return (
     <>
       <Navbar />
-      <section data-aos="zoom-in" className="min-h-screen bg-pink-50 px-4 py-16 font-inter flex flex-col justify-center items-center">
-        <h1 className="mt-3 text-2xl md:text-3xl font-bold text-center mb-5 text-neutral-800">
+      <section data-aos="zoom-in" className="h-[calc(100vh-150px)] mt-20 bg-pink-50 px-4 font-inter flex flex-col items-center">
+        <h1 className="text-2xl md:text-3xl font-bold text-center mb-5 text-neutral-800">
           Découvrez nos prestations
         </h1>
 
-        <div className="flex-grow gap-5 grid grid-rows-3">
+       <div className="flex-grow gap-5 grid grid-rows-3 md:grid-cols-3 md:grid-rows-1 w-full">
 
           {/* SOURCILS */}
-          <Link href="/prestations/sourcils" className="relative border border-pink-600 bg-white rounded-xl shadow-md overflow-hidden">
+          <Link href="/prestations/sourcils" className="relative border border-pink-600 font-great text-pink-600 bg-white rounded-xl shadow-md overflow-hidden transform transition-all duration-500 hover:scale-105 hover:text-white">
             <img src="/img/sourcils-3.png" className="w-full h-full brightness-30 object-cover rounded-xl" alt="Sourcils" />
-            <span className="absolute font-great text-pink-600 bottom-2 left-3 text-2xl md:text-3xl">à partir de 20€</span>
-            <span className="absolute font-great text-pink-600 bottom-2 right-3 text-4xl md:text-5xl">Sourcils</span>
+            <span className="absolute bottom-2 left-3 text-2xl md:text-3xl">à partir de 20€</span>
+            <span className="absolute bottom-2 right-3 text-4xl md:text-5xl">Sourcils</span>
           </Link>
 
           {/* CILS */}
-          <Link href="/prestations/cils" className="relative border border-pink-600 bg-white rounded-xl shadow-md overflow-hidden">
+          <Link href="/prestations/cils" className="relative border border-pink-600 font-great text-pink-600 bg-white rounded-xl shadow-md overflow-hidden transform transition-all duration-500 hover:scale-105 hover:text-white">
             <img src="/img/cils-3.png" className="w-full h-full brightness-30 object-cover rounded-xl" alt="Cils" />
-            <span className="absolute font-great text-pink-600 bottom-2 left-3 text-2xl md:text-3xl">à partir de 30€</span>
-            <span className="absolute font-great text-pink-600 bottom-2 right-3 text-4xl md:text-5xl">Cils</span>
+            <span className="absolute bottom-2 left-3 text-2xl md:text-3xl">à partir de 30€</span>
+            <span className="absolute bottom-2 right-3 text-4xl md:text-5xl">Cils</span>
             
           </Link>
 
           {/* DENTS */}
-          <Link href="/prestations/dentaire" className="relative border border-pink-600 bg-white rounded-xl shadow-md overflow-hidden">
+          <Link href="/prestations/dentaire" className="relative border border-pink-600 font-great text-pink-600 bg-white rounded-xl shadow-md overflow-hidden transform transition-all duration-500 hover:scale-105 hover:text-white">
             <img src="/img/dent-3.png" className="w-full h-full brightness-30 object-cover rounded-xl" alt="Dentaire" />
-            <span className="absolute font-great text-pink-600 bottom-2 left-3 text-2xl md:text-3xl">à partir de 15€</span>
-            <span className="absolute font-great text-pink-600 bottom-2 right-3 text-4xl md:text-5xl">Dentaire</span>
+            <span className="absolute bottom-2 left-3 text-2xl md:text-3xl">à partir de 15€</span>
+            <span className="absolute bottom-2 right-3 text-4xl md:text-5xl">Dentaire</span>
           </Link>
         </div>
 
         {/* SECTION AVIS CLIENTS EN CAROUSEL */}
-        <div className="hidden md:block max-w-3xl mx-auto px-4">
+        <div className="hidden md:block max-w-3xl mx-auto px-4 pt-15">
           <h2 className="text-2xl font-semibold text-center mb-8 text-neutral-800">Elles nous font confiance :</h2>
           <Swiper
             modules={[Autoplay]}

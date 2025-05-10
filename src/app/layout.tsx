@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "Wafoulashes",
     images: [
       {
-        url: "https://www.wafoulashes.fr/img/cils.jpg", // à adapter
+        url: "https://www.wafoulashes.fr/img/cils.jpg",
         width: 1200,
         height: 630,
         alt: "Wafoulashes - beauté à prix doux",

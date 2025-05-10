@@ -14,7 +14,7 @@ export default function SourcilsPage() {
     <>
       <Navbar />
 
-      <section className="min-h-screen bg-pink-50 px-4 py-10">
+      <section className="h-[calc(100vh-150px)] mt-10 bg-pink-50 px-4 py-10">
         <div className="mb-6 rounded-xl overflow-hidden shadow-md" data-aos="fade-down">
           <img src="/img/sourcils-2.jpg" alt="Sourcils" className="w-full h-64 object-cover brightness-90" />
         </div>
