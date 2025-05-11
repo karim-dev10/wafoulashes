@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Link from "next/link";
-import SocialBar from "@/app/components/SocialBar";
 
 export default function SourcilsPage() {
   useEffect(() => {
@@ -18,7 +17,7 @@ export default function SourcilsPage() {
       <section className="min-h-screen bg-pink-50 pb-18 mt-10 px-4 py-10 md:mt-16 md:p-0">
 
 
-        <a href="/prestations" className="hidden md:block absolute right-5 top-20 text-black italic z-1"> Voir les autres prestations &rsaquo;</a>
+        <Link href="/prestations" className="hidden md:block absolute right-5 top-20 text-black italic z-1"> Voir les autres prestations &rsaquo;</Link>
 
         <div className="md:grid md:grid-cols-2 md:gap-5 md:pt-5 md:bg-white md:px-5">
           <div className="md:mb-6 rounded-xl overflow-hidden shadow-xl" data-aos="fade-down">
@@ -29,7 +28,7 @@ export default function SourcilsPage() {
             <h1 className="font-great text-5xl md:text-5xl font-bold color-text-hp pt-10 px-4">Des sourcils parfaits pour sublimer votre visage</h1>
 
             <div className="text-neutral-700 rounded-xl shadow-xl p-4 space-y-4 max-w-md my-4 mx-auto md:max-w-full md:mx-0 md:text-lg md:col-span-3 md:my-0">
-              <p className="mb-4"> Offrez à votre regard une véritable transformation avec nos prestations expertes dédiées aux sourcils. Que vous souhaitiez restructurer votre ligne, intensifier votre regard ou obtenir un effet lifté naturel, nos soins sourcils sont conçus pour s’adapter à chaque morphologie et sublimer chaque visage. </p> <p className="mb-4"> Nos techniques incluent le browlift, la teinture, la restructuration et l'airbrush, permettant de redonner forme, volume et définition à vos sourcils. Chaque prestation est réalisée avec précision et dans le respect de votre peau pour un résultat harmonieux et longue tenue. </p> <p> Spécialistes des soins du regard, nous mettons un point d’honneur à offrir des services personnalisés, adaptés à vos besoins et à vos envies. Confiez-nous vos sourcils et révélez toute l’intensité de votre regard avec un fini professionnel, naturel et durable. </p>
+              <p className="mb-4"> Offrez à votre regard une véritable transformation avec nos prestations expertes dédiées aux sourcils. Que vous souhaitiez restructurer votre ligne, intensifier votre regard ou obtenir un effet lifté naturel, nos soins sourcils sont conçus pour s’adapter à chaque morphologie et sublimer chaque visage. </p> <p className="mb-4"> Nos techniques incluent le browlift, la teinture, la restructuration et l’airbrush, permettant de redonner forme, volume et définition à vos sourcils. Chaque prestation est réalisée avec précision et dans le respect de votre peau pour un résultat harmonieux et longue tenue. </p> <p> Spécialistes des soins du regard, nous mettons un point d’honneur à offrir des services personnalisés, adaptés à vos besoins et à vos envies. Confiez-nous vos sourcils et révélez toute l’intensité de votre regard avec un fini professionnel, naturel et durable. </p>
             </div>
           </div>
         </div>

@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Link from "next/link";
-import SocialBar from "@/app/components/SocialBar";
 
 export default function DentsPage() {
   useEffect(() => {
@@ -17,7 +16,7 @@ export default function DentsPage() {
 
       <section className="min-h-screen bg-pink-50 pb-18 mt-10 px-4 py-10 md:mt-16 md:p-0">
 
-        <a href="/prestations" className="hidden md:block absolute right-5 top-20 text-black italic z-1"> Voir les autres prestations &rsaquo;</a>
+        <Link href="/prestations" className="hidden md:block absolute right-5 top-20 text-black italic z-1"> Voir les autres prestations &rsaquo;</Link>
 
         <div className="md:grid md:grid-cols-2 md:gap-5 md:pt-5 md:bg-white md:px-5">
           <div className="md:mb-6 rounded-xl overflow-hidden shadow-xl" data-aos="fade-down">
@@ -86,10 +85,10 @@ export default function DentsPage() {
 
           <div className="block md:hidden bg-white text-neutral-700 rounded-xl shadow-xl p-4 space-y-4 max-w-md my-4 mx-auto md:max-w-full md:mx-0 md:text-xl md:col-span-3 md:my-0" data-aos="fade-up">
             <p className="mb-4">
-              Chez Wafoulashes, notre service de blanchiment dentaire est conçu pour redonner éclat et blancheur à votre sourire en toute sécurité. Grâce à des produits professionnels et des techniques douces, vous profitez d'un résultat visible dès la première séance.
+              Chez Wafoulashes, notre service de blanchiment dentaire est conçu pour redonner éclat et blancheur à votre sourire en toute sécurité. Grâce à des produits professionnels et des techniques douces, vous profitez d’un résultat visible dès la première séance.
             </p>
             <p>
-              Nous proposons également des retouches régulières pour maintenir l'éclat de vos dents ainsi que des strass dentaires pour une touche originale et glamour. Notre priorité : vous offrir un sourire lumineux et naturel, dans un cadre chaleureux et professionnel.
+              Nous proposons également des retouches régulières pour maintenir l’éclat de vos dents ainsi que des strass dentaires pour une touche originale et glamour. Notre priorité : vous offrir un sourire lumineux et naturel, dans un cadre chaleureux et professionnel.
             </p>
           </div>
         </div>

@@ -17,7 +17,7 @@ export default function CilsPage() {
 
             <section className="min-h-screen bg-pink-50 pb-18 mt-10 px-4 py-10 md:mt-16 md:p-0">
 
-                <a href="/prestations" className="hidden md:block absolute right-5 top-20 text-black italic z-1">Voir les autres prestations &rsaquo;</a>
+                <Link href="/prestations" className="hidden md:block absolute right-5 top-20 text-black italic z-1">Voir les autres prestations &rsaquo;</Link>
 
                 <div className="md:grid md:grid-cols-2 md:gap-5 md:pt-5 md:bg-white md:px-5">
                     <div className="md:mb-6 rounded-xl overflow-hidden shadow-xl" data-aos="fade-down">
@@ -40,7 +40,7 @@ export default function CilsPage() {
                                 Adapté à toutes les formes d’yeux et à tous les types de cils, notre soin est effectué avec des produits de qualité, sans danger pour vos yeux. Vous profitez d’un résultat durable, élégant et parfaitement exécuté dans un environnement professionnel et relaxant.
                             </p>
                             <p>
-                                Réservez votre séance chez Wafoulashes et révélez toute la beauté de votre regard. Pour un effet "waouh" naturel, longue tenue et sans effort, faites confiance à notre expertise en soins du regard.
+                                Réservez votre séance chez Wafoulashes et révélez toute la beauté de votre regard. Pour un effet naturel, longue tenue et sans effort, faites confiance à notre expertise en soins du regard.
                             </p>
 
                         </div>
