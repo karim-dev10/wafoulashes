@@ -29,10 +29,10 @@ function Homepage() {
             </div>
 
             <div className='px-5'>
-                <h1 className="text-5xl md:text-6xl font-bold mb-4 text-black font-great" data-aos="fade-up">
-                    Wafoulashes
-                </h1>
-                <p className="font-inter tracking-wide text-lg space- md:text-xl max-w-3xl mb-6 text-black font-semibold md:font-medium" data-aos="fade-up">
+                <div className="text-5xl md:text-6xl font-bold mb-8 color-text-hp font-great" data-aos="fade-up">
+                    <h1 className="btn-shine">Wafoulashes</h1>
+                </div>
+                <p className="font-inter tracking-wide text-lg space- md:text-xl max-w-3xl mb-6 color-text-hp font-semibold md:font-medium" data-aos="fade-up">
                     Sublime ton regard et ton sourire avec nos prestations beauté à petit prix.
                 </p>
             </div>

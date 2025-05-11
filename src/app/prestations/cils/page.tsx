@@ -15,7 +15,7 @@ export default function CilsPage() {
         <>
             <Navbar />
 
-            <section className="h-[calc(100vh-150px)] mt-10 bg-pink-50 px-4 py-10">
+            <section className="min-h-screen mt-10 bg-pink-50 px-4 py-10 pb-18">
                 {/* Image de couverture */}
                 <div className="mb-6 rounded-xl overflow-hidden shadow-md" data-aos="fade-down">
                     <img src="/img/cils-2.jpg" alt="Rehaussement de cils" className="w-full h-64 object-cover brightness-90" />

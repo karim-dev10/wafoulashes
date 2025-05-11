@@ -1,11 +1,11 @@
 'use client'
-import Navbar from "@/app/components/Navbar" // adapte le chemin selon ta structure
+import Navbar from "@/app/components/Navbar"
 
 export default function ReservationPage() {
   return (
     <>
+      <main>
       <Navbar />
-      <main className="bg-pink-50">
         <iframe
           src="https://cal.com/wafou/prestation?lang=fr"
           className="w-full min-h-screen h-full border-0"

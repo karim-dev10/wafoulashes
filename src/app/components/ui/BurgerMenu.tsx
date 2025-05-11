@@ -47,19 +47,18 @@ export default function BurgerMenu() {
 
               <div className="space-y-2">
                 <button
-                  onClick={() => setOpenSubmenu(!openSubmenu)}
                   className="flex items-center justify-between w-full py-2 px-3 rounded-lg hover:bg-pink-50 text-gray-800 font-medium transition-colors"
                 >
                   <div className="flex items-center">
                     <span className="mr-2 w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 text-xs">
                       P
                     </span>
-                    Prestations
+                    <Link href="/prestations">Prestations</Link>
                   </div>
                   {openSubmenu ? (
-                    <ChevronDown size={18} className="text-gray-500" />
+                    <ChevronDown onClick={() => setOpenSubmenu(!openSubmenu)} size={18} className="text-gray-500" />
                   ) : (
-                    <ChevronRight size={18} className="text-gray-500" />
+                    <ChevronRight onClick={() => setOpenSubmenu(!openSubmenu)} size={18} className="text-gray-500" />
                   )}
                 </button>
 

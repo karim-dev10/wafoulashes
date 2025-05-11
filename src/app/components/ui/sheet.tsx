@@ -4,6 +4,7 @@ import * as React from "react"
 import * as SheetPrimitive from "@radix-ui/react-dialog"
 import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
+import SocialBar from "../SocialBar"
 
 const Sheet = SheetPrimitive.Root
 
@@ -68,6 +69,7 @@ const SheetContent = React.forwardRef<
         <span className="sr-only">Close</span>
       </SheetPrimitive.Close> */}
       {children}
+      <SocialBar/>
     </SheetPrimitive.Content>
   </SheetPortal>
 ))
